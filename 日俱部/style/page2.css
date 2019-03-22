@@ -1,0 +1,38 @@
+.mainfocus{
+  margin:100px 70px;
+  padding:10px;
+  border-top:5px dotted pink;
+  font-size: 30px;
+}
+
+.mainfocus img{
+    width:100px;
+    height:100px;
+    border-radius:1000px;
+    opacity:0.9;
+}
+
+.mainfocus div{
+    float:left;
+    width:20%;
+    margin:10px;
+    text-align: center;
+    padding:5px;
+}
+
+.department {
+    width:90%;
+    margin:10px 70px;
+}
+
+.department div{
+    border:5px dotted pink;
+    border-radius:10px;
+    float:left;
+    width:20%;
+    height:210px;
+    margin:10px;
+    padding:5px;
+    text-indent:2em;
+    font-size: 20px;
+}

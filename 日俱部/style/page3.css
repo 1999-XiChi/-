@@ -1,0 +1,18 @@
+.activity{
+margin-left:100px;
+}
+
+.activity img{
+    width:300px;
+    height:400px;
+    border-top-left-radius:10px;
+    margin-left:50px;
+    margin-top:10px;
+}
+
+.act-introduce{
+    width:90%;
+    margin:35px;
+    text-align: center;
+    font-size: 20px;
+}

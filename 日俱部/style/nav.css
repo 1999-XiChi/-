@@ -1,0 +1,39 @@
+
+.mynav {
+  list-style-type: none;
+  padding:0;
+  overflow:hidden;
+  top:0;
+  width:100%;
+  background-color: lightpink;
+
+}
+
+li{
+  float:left;
+  background-color: lightpink;
+}
+
+li a:hover:not(.active) {
+  background-color:rgb(255, 172, 172);
+ }
+
+li a{
+  display:block;
+  color:white;
+  text-align:center;
+  padding:14px 14px;
+  text-decoration:none;
+}
+
+.active{
+  background-color:rgb(252, 157, 157);
+}
+
+.parts{
+  float:left;
+}
+
+.joinUs{
+  float:right;
+}
