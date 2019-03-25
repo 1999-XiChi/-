@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>移动营业厅</title>
+    <link rel="stylesheet" href="style/contain.css">   
+</head>
+<body>
+
+    <table class="table table-hover table-bordered" id="mytable">
+        <thead>
+            <tr>
+                <th>选中</th>
+                <th>手机号</th>
+                <th>用户名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>身份证号</th>
+                <th>职业</th>
+                <th>家庭住址</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="checkAll(this)"/></td>
+                <td colspan="6"><a href="javascript:;" class="btn btn-danger" role="button" onclick="delAll()">全部删除</a></td>
+            </tr>
+        </thead>
+        <tbody id="listTable">    
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>13867012157</td>
+                <td>周灿</td>
+                <td>女</td>
+                <td>19</td>
+                <td>330821199910206028</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>
+                    <input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>18778962417</td>
+                <td>梁佩欣</td>
+                <td>女</td>
+                <td>19</td>
+                <td>450924199908113625</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>
+                    <input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>19802578961</td>
+                <td>虞黄悦</td>
+                <td>女</td>
+                <td>19</td>
+                <td>320683199911168242</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>
+                    <input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <h1>新增数据</h1>
+<form>
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th>手机号</th>
+            <td><input type="text" name="" class="form-control" id="phone" /></td>
+        </tr>
+        <tr>
+            <th>用户名</th>
+            <td><input type="text" name="" class="form-control" id="username" /></td>
+        </tr>
+        <tr>
+            <th>性别</th>
+            <td><input type="text" name="" class="form-control" id="sex" /></td>
+        </tr>
+        <tr>
+            <th>年龄</th>
+            <td><input type="text" name="" class="form-control" id="age" /></td>
+        </tr>
+        <tr>
+            <th>身份证号</th>
+            <td><input type="text" name="" class="form-control" id="ID" /></td>
+        </tr>
+        <tr>
+            <th>职业</th>
+            <td><input type="text" name="" class="form-control" id="Job" /></td>
+        </tr>
+        <tr>
+            <th>家庭住址</th>
+            <td><input type="text" name="" class="form-control" id="homePlace" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="reset" value="重置" class="btn btn-primary" id="reset" />   
+                <input type="button" value="添加"  class="btn btn-success" id="add"  onclick="addList()" />
+                <input type="button" value="更新"  class="btn btn-info" id="new"  onclick="update()" />
+            </td>
+        </tr>
+    </table>
+</form>
+<script src="script/contain.js"></script>
+</body>
+</html>
