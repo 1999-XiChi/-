@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>移动营业厅后台管理</title>
+    <link rel="stylesheet" href="style/contain.css">  
+    <link rel="shortcut icon" type="image/x-icon" href="中国移动 (1).png" />
+   <!--  <link rel="stylesheet" href="style/amazeui.css">   -->
+</head>
+<body>
+<header class="top">
+    <nav>
+        <div class="logo">
+            <img src="assert/中国移动.png" alt="">
+        </div>
+        <div class="navbar">
+        <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">移动商城</a></li>
+            <li><a href="">网上营业厅</a></li>
+            <li><a href="">我的移动</a></li>
+            <li><a href="">服务中心</a></li>
+            <li><a href="" class="current">后台管理</a></li>
+        </ul>
+        </div>
+        <div class="navSearch">
+            <input type="text" placeholder="请输入关键字">
+            <a href=""><img src="assert/搜索.png" alt=""></a>
+        </div>
+        <div class="person">
+            <a href="">个人中心<img src="" alt=""></a>
+            <a href=""><img src="assert/头像.png" alt=""></a>
+            <div class="dropdown-content">
+              <ul>
+                  <li><a href="">充值交费</a></li>
+                  <li><a href="index1.html">我的账户</a></li>
+                  <li><a href="">我的信息</a></li>
+                  <li><a href="">我的订单</a></li>
+                  <li><a href="">我的消息</a></li>
+                  <li><a href="index.html">退出登录</a></li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- 使网页不再空 -->
+<div class="banner">
+    <div class="container">
+    <div class="slidebar" id="sliderbar" style="width:200px;  float:left;">
+        <ul>
+            <li><a href=""><img src="assert/icon/1 (1).png" alt="">业务办理<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (2).png" alt="">手机购买<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (4).png" alt="">家庭服务<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (5).png" alt="">智能硬件<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (6).png" alt="">查询服务<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (7).png" alt="">特色专区<span style="float: right;font-family: arial; ">></span> </a></li>
+        </ul>
+    </div>
+<div class="box" id="box">
+    <div class="inner">
+        <ul>
+            <li><a href="#"><img src="assert/banner1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="assert/banner2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="assert/banner3.png" alt=""></a></li>
+        </ul>
+        <ol class="bar">
+        </ol>
+        <div id="arr">
+              <span id="left"> <</span>
+              <span id="right">></span>
+        </div>
+    </div>
+   
+</div>
+<div class="rightbar">
+    <div class="meunIcon">
+    <ul>  
+        <li><a href=""><img src="assert/menu/ (1).gif" alt="">优惠专区</a></li>
+        <li><a href=""><img src="assert/menu/ (2).gif" alt="">话费充值</a></li>
+        <li><a href=""><img src="assert/menu/ (3).gif" alt="">业务办理</a></li>
+        <li><a href=""><img src="assert/menu/ (4).gif" alt="">账单明细</a></li>
+        <li><a href=""><img src="assert/menu/ (5).gif" alt="">积分兑换</a></li>
+        <li><a href=""><img src="assert/menu/ (1).png" alt="">国际业务</a></li>
+    </ul> 
+    <input type="submit" value="立即充值"> 
+    </div>
+</div>
+</div>
+</div>
+<div id="mainBody">
+    <table class="table table-hover table-bordered container" id="mytable">
+        <thead>
+            <tr>
+                <th>选中</th>
+                <th>手机号</th>
+                <th>用户名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>身份证号</th>
+                <th>职业</th>
+                <th>家庭住址</th>
+                <th>话费（元）</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="checkAll(this)"/></td>
+                <td colspan="3"><a href="javascript:;" class="btn btn-danger" role="button" onclick="delAll()">批量删除</a></td>
+                <td colspan="3"><a href="" class="btn btn-save" onclick="saveAll()" id="save">保存数据</a></td>
+                <td colspan="3"></td>
+            </tr>
+        </thead> 
+        <tbody id="listTable">    
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>13867102136</td>
+                <td>周灿</td>
+                <td>女</td>
+                <td>19</td>
+                <td>330821199910207056</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>5000</td>
+                <td>
+                    <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>18778954337</td>
+                <td>梁佩欣</td>
+                <td>女</td>
+                <td>19</td>
+                <td>450924199908114569</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>0</td>
+                <td>
+                    <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>19802571111</td>
+                <td>虞黄悦</td>
+                <td>女</td>
+                <td>18</td>
+                <td>320683199911161234</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>2</td>
+                <td>
+                    <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                    <td><input type="checkbox" name="item" /></td>
+                    <td>13867122136</td>
+                    <td>周灿</td>
+                    <td>女</td>
+                    <td>14</td>
+                    <td>330821199910207056</td>
+                    <td>学生</td>
+                    <td>江苏省南京市南京邮电大学</td>
+                    <td>5000</td>
+                    <td>
+                        <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                        <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="item" /></td>
+                    <td>18578954337</td>
+                    <td>梁佩欣</td>
+                    <td>女</td>
+                    <td>9</td>
+                    <td>450924199908114569</td>
+                    <td>学生</td>
+                    <td>江苏省南京市南京邮电大学</td>
+                    <td>80</td>
+                    <td>
+                        <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                        <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="item" /></td>
+                    <td>19832571111</td>
+                    <td>虞黄悦</td>
+                    <td>女</td>
+                    <td>58</td>
+                    <td>320683199911161234</td>
+                    <td>学生</td>
+                    <td>江苏省南京市南京邮电大学</td>
+                    <td>225</td>
+                    <td>
+                        <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                        <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                    </td>
+                </tr>
+                <tr>
+                        <td><input type="checkbox" name="item" /></td>
+                        <td>13857102136</td>
+                        <td>周灿</td>
+                        <td>女</td>
+                        <td>49</td>
+                        <td>330821199910207056</td>
+                        <td>学生</td>
+                        <td>江苏省南京市南京邮电大学</td>
+                        <td>50</td>
+                        <td>
+                            <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                            <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="item" /></td>
+                        <td>18778754337</td>
+                        <td>梁佩欣</td>
+                        <td>女</td>
+                        <td>63</td>
+                        <td>450924199908114569</td>
+                        <td>学生</td>
+                        <td>江苏省南京市南京邮电大学</td>
+                        <td>30</td>
+                        <td>
+                            <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                            <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="item" /></td>
+                        <td>19802571121</td>
+                        <td>虞黄悦</td>
+                        <td>女</td>
+                        <td>72</td>
+                        <td>320683199911161234</td>
+                        <td>学生</td>
+                        <td>江苏省南京市南京邮电大学</td>
+                        <td>28</td>
+                        <td>
+                            <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                            <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                        </td>
+                    </tr>
+                    <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>13847102136</td>
+                <td>周灿</td>
+                <td>女</td>
+                <td>38</td>
+                <td>330821199910207056</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>650</td>
+                <td>
+                    <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>18778954237</td>
+                <td>梁佩欣</td>
+                <td>女</td>
+                <td>26</td>
+                <td>450924199908114569</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>100</td>
+                <td>
+                    <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>19801571111</td>
+                <td>虞黄悦</td>
+                <td>女</td>
+                <td>54</td>
+                <td>320683199911161234</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>120</td>
+                <td>
+                    <input type="button" name="" value="注销" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<div id="menu" class="container">
+    <!-- 菜单2；查找数据 -->
+<div class="menu1">
+    <table>
+        <tr>
+            <th>查找方式</th>
+            <td><select id='searchBox'>
+                <option value="手机号">手机号</option>
+                <option value="用户名">用户名</option>
+                <option value="身份证号">身份证号</option>
+                <option value="话费">话费</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th>内容</th>
+            <td><input type="text" id='searchFor'></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="重置" class="btn btn-primary" onclick="reset()">
+                <input type="button" value="查找" class="btn btn-search" onclick="searchObj()">
+            </td>
+        </tr>
+    </table>
+</div>
+    <!-- 菜单3：数组排序 -->
+<div class="menu2">
+    <table>
+        <tr>
+            <th>排序</th>
+            <td>
+                <select name="" id="chooseBox">
+                    <option value="年龄">年龄</option>
+                    <option value="身份证号">身份证号</option>
+                    <option value="话费">话费</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>排序方式</th>
+            <td>
+                <select name="" id="rankBox">
+                    <option value="从大到小">从大到小</option>
+                    <option value="从小到大">从小到大</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+                <td colspan="2">
+                   <input type="button" value="重置" class="btn btn-primary" onclick="reset()">
+                   <input type="button" value="排序" class="btn btn-rank" onclick="rank()"/>
+                </td>
+        </tr>
+    </table>
+</div>
+    <!-- 菜单1：增加、修改和删除数据 -->
+    <div class="menu3">
+        <h2>新增数据</h2>
+    <form>
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>手机号</th>
+                <td><input type="text" name="" class="form-control" id="phone" /></td>
+            </tr>
+            <tr>
+                <th>用户名</th>
+                <td><input type="text" name="" class="form-control" id="username" /></td>
+            </tr>
+            <tr>
+                <th>性别</th>
+                <td><input type="text" name="" class="form-control" id="sex" /></td>
+            </tr>
+            <tr>
+                <th>年龄</th>
+                <td><input type="text" name="" class="form-control" id="age" /></td>
+            </tr>
+            <tr>
+                <th>身份证号</th>
+                <td><input type="text" name="" class="form-control" id="ID" /></td>
+            </tr>
+            <tr>
+                <th>职业</th>
+                <td><input type="text" name="" class="form-control" id="Job" /></td>
+            </tr>
+            <tr>
+                <th>家庭住址</th>
+                <td><input type="text" name="" class="form-control" id="homePlace" /></td>
+            </tr>
+            <tr>
+                <th>话费（元）</th>
+                <td><input type="text" name="" class="form-control" id="money" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="reset" value="重置" class="btn btn-primary" id="reset" onclick="menuReset()" />   
+                    <input type="button" value="注册"  class="btn btn-success" id="add"  onclick="addList()" />
+                    <input type="button" value="更新"  class="btn btn-info" id="new"  onclick="update()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</div>
+</div>
+<div class="MakeItRich">
+<ul>
+    <li><a href="http://www.zxjsq.net/"><img src="assert/MIR/jisuanqi.png" alt=""></a>
+        <p>话费计算</p>
+        <p>快使用我，计算用户的话费吧</p>
+    </li>
+    <li><a href="https://www.afenxi.com/"><img src="assert/MIR/monitor.png" alt=""></a>
+        <p>数据分析</p>
+        <p>快使用我，分析用户的喜好吧</p>
+    </li>
+    <li><a href="https://www.tnt.com/express/zh_cn/site/shipping-tools/online-billing.html"><img src="assert/MIR/notebook.png" alt=""></a>
+        <p>账目统计</p>
+        <p>快使用我，统计公司的收益吧</p>
+    </li>
+    <li><a href="https://www.baidu.com/"><img src="assert/MIR/talk.png" alt=""></a>
+        <p>交流平台</p>
+        <p>快使用我，与用户面对面交流吧</p>
+    </li>
+</ul>
+</div>
+<div class="rocket">
+    <a href="#top">
+    <img src="assert/火箭.png" alt="">
+    </a>
+</div>
+<footer>
+    <div class="introduce">
+        <img src="assert/中国移动.png" alt="">
+        <p>©ALL GREAT, designed by L.Z.Y Office.法律声明</p>
+        <p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：13867012157</p>
+    </div>
+    <div class="stupid">
+        <p>友情链接</p>
+      <div class="hh"><a href="">移动官网</a>
+        <a href="">移动手机端</a>
+        <a href="">菜鸟教程</a>
+        <a href="">网易有道词典</a>
+        <a href="">老中医工作室</a>
+        <a href="">空中教室</a></div>  
+        <div class="pic">
+           <a href=""><img src="assert/footor/微博.png" alt=""></a>
+        <div class="dropdown">
+            <a href=""><img src="assert/footor/QQ.png" alt=""></a>
+            <div class="dropdown-content">
+                 <img src="assert/qq.jpg" alt="">
+            </div>
+        </div>   
+          <a href=""><img src="assert/footor/邮箱.png" alt=""></a>
+        
+    </div>
+</footer>
+<script src="script/functions.js"></script>
+<script src="script/beautify.js"></script>
+<!-- <script src="script/amazeui.js"></script> -->
+</body>
+</html>
