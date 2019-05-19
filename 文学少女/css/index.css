@@ -1,0 +1,118 @@
+/* css初始化 */
+* {
+  margin: 0;
+  padding: 0;
+  /* 清除内外边距 */
+}
+body {
+  line-height: 1;
+  font-family: "Lato", sans-serif;
+  background-color: #EFF1F2;
+}
+ul {
+  list-style: none;
+  /* 去掉列表样式小点 */
+}
+.clearfix:before,
+.clearfix:after {
+  /* 清除浮动 */
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+a {
+  color: #050505;
+  text-decoration: none;
+  /* 取消下划线 */
+}
+input,
+select {
+  border: 0;
+  /* 所有的表单边框为0 */
+  box-sizing: border-box;
+  /* CSS3盒子模型 border 和 padding 都包含到 width 里面去 */
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 20.07px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 51.2px;
+  }
+}
+@media screen and (min-width: 1288px) {
+  html {
+    font-size: 64.4px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 100px;
+  }
+}
+/* 导航栏 */
+.MYnavbar {
+  margin-bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 999;
+}
+.MYnavbar li {
+  padding-left: 1rem;
+  float: left;
+}
+.MYnavbar li > a {
+  color: #fff;
+  line-height: 1rem;
+  font-size: 0.21rem;
+  text-decoration: none;
+}
+.MYnavbar li:nth-child(6) {
+  float: right;
+  padding-right: 1rem;
+}
+/* 轮播图 */
+.MYcarousel {
+  width: 100%;
+  margin: 0 auto;
+}
+.MYcarousel .item img {
+  width: 25rem;
+  height: 15rem;
+  text-align: center;
+  display: block;
+}
+@media screen and (min-width: 480px) {
+  .MYcarousel .item img {
+    height: 11.2rem;
+  }
+}
+/* 人物介绍 */
